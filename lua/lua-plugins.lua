@@ -29,6 +29,3 @@ require('toggleterm').setup {
 
 -- Comments
 require('Comment').setup()
-
--- Git
--- require('gitsigns').setup()

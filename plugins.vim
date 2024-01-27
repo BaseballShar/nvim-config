@@ -9,7 +9,7 @@ Plug 'akinsho/toggleterm.nvim', { 'tag' : 'v2.9.0'}
 
 " Stare into the stars
 Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.5' }
+Plug 'nvim-telescope/telescope.nvim'
 
 " Git integrations
 Plug 'tpope/vim-fugitive'
@@ -47,7 +47,7 @@ Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
 
 " A nerdy file explorer
-Plug 'preservim/nerdtree', { 'tag': '7.1.1'}
+Plug 'preservim/nerdtree', {'tag': '7.1.1'}
 Plug 'PhilRunninger/nerdtree-visual-selection'
 Plug 'ryanoasis/vim-devicons'
 
@@ -64,6 +64,9 @@ Plug 'tpope/vim-surround'
 
 " Autopairs
 Plug 'jiangmiao/auto-pairs'
+
+" It is cool
+Plug 'romainl/vim-cool'
 
 " todo LIST
 Plug 'aserebryakov/vim-todo-lists'
