@@ -2,15 +2,15 @@
 require('lualine').setup {
   sections = {
     lualine_b = {'branch', 'diff'},
-    lualine_c = {},
+    lualine_c = {'g:coc_status'},
     lualine_x = {'diagnostics'}
   }
 }
 
 -- A decent buffer indicator for vim
-require('bufferline').setup {}
+require('bufferline').setup()
 
--- Huge and colour tree!
+-- Huge and colourful tree!
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "all",
   auto_install = true,
@@ -21,11 +21,8 @@ require'nvim-treesitter.configs'.setup {
   indent = {enable = true}
 }
 
--- TERMINAL
-require('toggleterm').setup {
-  size = 15,
-  open_mapping = [[<C-t>]],
-}
+-- A Terminal inside a vim run by another terminal
+require('toggleterm').setup {size = 15, open_mapping = [[<C-t>]]}
 
--- Comments
+-- Should provide better commenting for CODE!
 require('Comment').setup()

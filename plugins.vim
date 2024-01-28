@@ -5,7 +5,7 @@ call plug#begin()
 Plug 'sainnhe/everforest'
 
 " A nice terminal
-Plug 'akinsho/toggleterm.nvim', { 'tag' : 'v2.9.0'}
+Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.9.0'}
 
 " Stare into the stars
 Plug 'nvim-lua/plenary.nvim'
@@ -14,10 +14,9 @@ Plug 'nvim-telescope/telescope.nvim'
 " Git integrations
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-" Plug 'lewis6991/gitsigns.nvim', { 'tag': 'v0.7' }
 
 " latexify vim
-Plug 'lervag/vimtex', { 'tag': 'v2.13' }
+Plug 'lervag/vimtex', {'tag': 'v2.13'}
 
 " Code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -32,6 +31,7 @@ Plug 'w0rp/ale'
 Plug 'google/vim-maktaba'
 Plug 'google/vim-codefmt'
 Plug 'google/vim-glaive'
+
 " Handle haskell formatting
 Plug 'sdiehl/vim-ormolu'
 
@@ -52,7 +52,6 @@ Plug 'PhilRunninger/nerdtree-visual-selection'
 Plug 'ryanoasis/vim-devicons'
 
 " A nice code commenter
-" Plug 'tpope/vim-commentary', { 'tag': 'v1.3'}
 Plug 'numToStr/Comment.nvim'
 
 " Bringing fzf to vim
@@ -83,10 +82,13 @@ nnoremap <silent> <Space>pu :PlugUpdate<CR>
 nnoremap <silent> <Space>pc :PlugClean<CR>
 
 " Telescope toolbelts
-nnoremap <Space>ff <cmd>Telescope find_files<cr>
-nnoremap <Space>fg <cmd>Telescope live_grep<cr>
-nnoremap <Space>fb <cmd>Telescope buffers<cr>
-nnoremap <Space>fh <cmd>Telescope help_tags<cr>
+nnoremap <Space>f <cmd>Telescope find_files<CR>
+nnoremap <Space>sg <cmd>Telescope live_grep<CR>
+nnoremap <Space>sb <cmd>Telescope buffers<CR>
+nnoremap <Space>sh <cmd>Telescope help_tags<CR>
+nnoremap <Space>sk <cmd>Telescope keymaps<CR>
+nnoremap <Space>sc <cmd>Telescope git_commits<CR>
+nnoremap <Space>ss <cmd>Telescope git_status<CR>
 
 augroup autoformat_settings
   autocmd BufRead * NoAutoFormatBuffer
@@ -99,6 +101,13 @@ augroup autoformat_settings
   autocmd FileType python AutoFormatBuffer autopep8
   autocmd FileType tex nnoremap <silent> <buffer> <Space>cf :%!latexindent-macos<CR>
 augroup END
+
+" codefmt
+nnoremap <silent> <Space>cf :FormatCode<CR>
+nnoremap <silent> <Space>i gg=G
+
+" ale
+let g:ale_completion_enabled = 1
 
 " Git maps
 nnoremap <silent> <Space>ga :Git add --all<CR>
@@ -137,13 +146,6 @@ inoremap <silent> <C-W> <Plug>(copilot-accept-word)
 
 " NerdTree
 let g:nerdtree_vis_confirm_open = 0
-
-" codefmt
-nnoremap <silent> <Space>cf :FormatCode<CR>
-nnoremap <silent> <Space>i gg=G
-
-" ale
-let g:ale_completion_enabled = 1
 
 " coc
 " Use tab for trigger completion with characters ahead and navigate
@@ -206,11 +208,6 @@ xnoremap ic <Plug>(coc-classobj-i)
 onoremap ic <Plug>(coc-classobj-i)
 xnoremap ac <Plug>(coc-classobj-a)
 onoremap ac <Plug>(coc-classobj-a)
-
-" Add (Neo)Vim's native statusline support
-" NOTE: Please see `:h coc-status` for integrations with external plugins that
-" provide custom statusline: lightline.vim, vim-airline
-set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics
