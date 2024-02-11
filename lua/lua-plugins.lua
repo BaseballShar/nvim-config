@@ -22,7 +22,7 @@ require'nvim-treesitter.configs'.setup {
 }
 
 -- A Terminal inside a vim run by another terminal
-require('toggleterm').setup {size = 15, open_mapping = [[<C-t>]]}
+require('toggleterm').setup {size = 25, open_mapping = [[<C-t>]]}
 
 -- Should provide better commenting for CODE!
 require('Comment').setup()

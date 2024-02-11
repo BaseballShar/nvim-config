@@ -12,5 +12,6 @@
       ],
       "filetypes": ["haskell", "lhaskell"]
     }
-  }
+  },
+  "snippets.userSnippetsDirectory": "~/.config/nvim/snippets"
 }

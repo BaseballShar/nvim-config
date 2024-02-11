@@ -107,7 +107,7 @@ nnoremap <silent> <Space>cf :FormatCode<CR>
 nnoremap <silent> <Space>i gg=G
 
 " ale
-let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 0
 
 " Git maps
 nnoremap <silent> <Space>ga :Git add --all<CR>
