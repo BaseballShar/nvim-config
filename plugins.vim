@@ -82,13 +82,16 @@ nnoremap <silent> <Space>pu :PlugUpdate<CR>
 nnoremap <silent> <Space>pc :PlugClean<CR>
 
 " Telescope toolbelts
-nnoremap <Space>f <cmd>Telescope find_files<CR>
-nnoremap <Space>sg <cmd>Telescope live_grep<CR>
+nnoremap <Space>f <cmd>Telescope find_files theme=dropdown<CR>
+" nnoremap <Space>sg <cmd>Telescope live_grep theme=dropdown<CR>
+nnoremap <Space>g :Ag<CR>
 nnoremap <Space>sb <cmd>Telescope buffers<CR>
 nnoremap <Space>sh <cmd>Telescope help_tags<CR>
 nnoremap <Space>sk <cmd>Telescope keymaps<CR>
 nnoremap <Space>sc <cmd>Telescope git_commits<CR>
 nnoremap <Space>ss <cmd>Telescope git_status<CR>
+
+autocmd BufRead *.tex ALEDisable
 
 augroup autoformat_settings
   autocmd BufRead * NoAutoFormatBuffer
@@ -110,17 +113,17 @@ nnoremap <silent> <Space>i gg=G
 let g:ale_completion_enabled = 0
 
 " Git maps
-nnoremap <silent> <Space>ga :Git add --all<CR>
-nnoremap <silent> <Space>gb :Git branch<CR>
-nnoremap <silent> <Space>gc :Git commit<CR>
-nnoremap <silent> <Space>gd :Git diff<CR>
-nnoremap <silent> <Space>gdc :Git diff --cached<CR>
-nnoremap <silent> <Space>gf :Git fetch<CR>
-nnoremap <silent> <Space>gr :Git reset<CR>
-nnoremap <silent> <Space>grh :Git reset --hard<CR>
-nnoremap <silent> <Space>gs :Git status<CR>
-nnoremap <silent> <Space>gp :Git push<CR>
-nnoremap <silent> <Space>gl :Git pull<CR>
+" nnoremap <silent> <Space>ga :Git add --all<CR>
+" nnoremap <silent> <Space>gb :Git branch<CR>
+" nnoremap <silent> <Space>gc :Git commit<CR>
+" nnoremap <silent> <Space>gd :Git diff<CR>
+" nnoremap <silent> <Space>gdc :Git diff --cached<CR>
+" nnoremap <silent> <Space>gf :Git fetch<CR>
+" nnoremap <silent> <Space>gr :Git reset<CR>
+" nnoremap <silent> <Space>grh :Git reset --hard<CR>
+" nnoremap <silent> <Space>gs :Git status<CR>
+" nnoremap <silent> <Space>gp :Git push<CR>
+" nnoremap <silent> <Space>gl :Git pull<CR>
 
 " vimtex options
 " Disable auto popup of quickfix window
