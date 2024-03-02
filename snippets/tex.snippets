@@ -47,3 +47,47 @@ snippet asm
 \maketitle
 
 \end{document}
+
+snippet algo
+\documentclass[10pt]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+\usepackage{listings}
+
+\newcommand{\ds}{\displaystyle}
+
+\begin{document}
+\title{${1:title}}
+\author{Chan Tsz Ho\\\\UID: 3035785738}
+\date{}
+\maketitle
+
+\lstset{language=Python,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{brown},
+  stringstyle=\color{olive},
+  emph={function, append, sort, by, length, to, algorithm, Input, right, of},
+  emphstyle=\color{blue},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=2
+} 
+
+\begin{lstlisting}
+	This is some code
+\end{lstlisting}
+
+\end{document}
