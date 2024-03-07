@@ -17,6 +17,7 @@ Plug 'airblade/vim-gitgutter'
 
 " latexify vim
 Plug 'lervag/vimtex', {'tag': 'v2.13'}
+Plug 'KeitaNakamura/tex-conceal.vim', {'for': 'tex'}
 
 " Code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -135,6 +136,13 @@ let g:vimtex_view_skim_sync=1
 " Value 1 allows change focus to skim after command `:VimtexView` is given
 let g:vimtex_view_skim_activate=1
 autocmd FileType tex nnoremap <silent> <buffer> <Space>lt :VimtexTocToggle<CR>
+
+" Tex-conceal settings
+let g:tex_superscripts= "[0-9a-zA-W.,:;+-<>/()=]"
+let g:tex_subscripts= "[0-9aehijklmnoprstuvx,+-/().]"
+let g:tex_conceal_frac=1
+set conceallevel=2
+let g:tex_conceal="abdgm"
 
 " ormolu flags
 let g:ormolu_options=["--no-cabal"]
