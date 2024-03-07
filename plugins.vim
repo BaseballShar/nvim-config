@@ -86,11 +86,11 @@ nnoremap <silent> <Space>pc :PlugClean<CR>
 nnoremap <Space>f <cmd>Telescope find_files theme=dropdown<CR>
 " nnoremap <Space>sg <cmd>Telescope live_grep theme=dropdown<CR>
 nnoremap <Space>g :Ag<CR>
-nnoremap <Space>sb <cmd>Telescope buffers<CR>
-nnoremap <Space>sh <cmd>Telescope help_tags<CR>
-nnoremap <Space>sk <cmd>Telescope keymaps<CR>
-nnoremap <Space>sc <cmd>Telescope git_commits<CR>
-nnoremap <Space>ss <cmd>Telescope git_status<CR>
+nnoremap <Space>b <cmd>Telescope buffers<CR>
+" nnoremap <Space>sh <cmd>Telescope help_tags<CR>
+" nnoremap <Space>sk <cmd>Telescope keymaps<CR>
+" nnoremap <Space>sc <cmd>Telescope git_commits<CR>
+" nnoremap <Space>ss <cmd>Telescope git_status<CR>
 
 autocmd BufRead *.tex ALEDisable
 
