@@ -1,4 +1,4 @@
-snippet proof
+snippet tproof
 \documentclass[10pt]{article}
 \usepackage[margin=2cm]{geometry}
 \usepackage{amsmath}
@@ -25,7 +25,7 @@ snippet proof
 \end{landscape}
 \end{document}
 
-snippet asm
+snippet tasm
 \documentclass[10pt]{article}
 \usepackage[margin=2cm]{geometry}
 \usepackage{amsmath}
@@ -48,7 +48,7 @@ snippet asm
 
 \end{document}
 
-snippet algo
+snippet talgo
 \documentclass[10pt]{article}
 \usepackage[margin=2cm]{geometry}
 \usepackage{amsmath}
@@ -84,10 +84,58 @@ snippet algo
   breaklines=true,
   breakatwhitespace=true,
   tabsize=2
-} 
+}
 
 \begin{lstlisting}
 	This is some code
 \end{lstlisting}
+
+\end{document}
+
+snippet tnote
+\documentclass[twocolumn,10pt]{article}
+\usepackage[margin=2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{gensymb}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+\usepackage{listings}
+
+% \newcommand{alias}[arg_num]{#1#2...}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\cv}[2]{\begin{bmatrix}#1\\#2\end{bmatrix}}
+\newcommand{\rv}[2]{\begin{bmatrix}#1&#2\end{bmatrix}}
+% \newtheorem{env_name}{displayed_name}[parent_counter]
+\theoremstyle{definition}
+\newtheorem{fact}{Fact}[section]
+
+\lstset{language=Python,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{brown},
+  stringstyle=\color{olive},
+  emph={function, append, sort, by, length, to, algorithm, Input, right, of},
+  emphstyle=\color{blue},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=2
+}
+
+\begin{document}
+\title{${1:title}}
+\date{}
+\maketitle
+
+${2:content}
 
 \end{document}
