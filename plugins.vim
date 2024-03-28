@@ -3,6 +3,7 @@ call plug#begin()
 
 " A nice organic theme
 Plug 'sainnhe/everforest'
+Plug 'rebelot/kanagawa.nvim'
 
 " A nice terminal
 Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.9.0'}
@@ -70,10 +71,11 @@ Plug 'romainl/vim-cool'
 
 " todo LIST
 Plug 'aserebryakov/vim-todo-lists'
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
-colorscheme everforest
+colorscheme kanagawa
 
 call glaive#Install()
 
@@ -81,6 +83,11 @@ call glaive#Install()
 nnoremap <silent> <Space>pi :PlugInstall<CR>
 nnoremap <silent> <Space>pu :PlugUpdate<CR>
 nnoremap <silent> <Space>pc :PlugClean<CR>
+
+" Wiki instructions
+let g:vimwiki_list = [{'syntax': 'markdown', 'ext': 'md'}]
+nnoremap <M-Space> <Plug>VimwikiToggleListItem
+vnoremap <M-Space> <Plug>VimwikiToggleListItem
 
 " Telescope toolbelts
 nnoremap <Space>f <cmd>Telescope find_files theme=dropdown<CR>

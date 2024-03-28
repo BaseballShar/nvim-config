@@ -37,7 +37,7 @@ nnoremap <silent> <C-k> <C-w>k
 
 " Quit and save easily
 nnoremap <silent> <Space>q :qa!<CR>
-nnoremap <silent> <Space>w :w<CR>
+nnoremap <silent> <Space>s :w<CR>
 
 " No search highlighting
-nnoremap <silent> <Space>h :noh<CR>
+" nnoremap <silent> <Space>h :noh<CR>
