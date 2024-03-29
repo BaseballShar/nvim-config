@@ -69,9 +69,11 @@ Plug 'jiangmiao/auto-pairs'
 " It is cool
 Plug 'romainl/vim-cool'
 
-" todo LIST
-Plug 'aserebryakov/vim-todo-lists'
+" Notion is a useless and severely bloated markdown wrapper
 Plug 'vimwiki/vimwiki'
+
+" Bring colours into my eyes
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 call plug#end()
 
@@ -83,6 +85,9 @@ call glaive#Install()
 nnoremap <silent> <Space>pi :PlugInstall<CR>
 nnoremap <silent> <Space>pu :PlugUpdate<CR>
 nnoremap <silent> <Space>pc :PlugClean<CR>
+
+" CSS colours
+let g:Hexokinase_highlighters = ['foregroundfull']
 
 " Wiki instructions
 let g:vimwiki_list = [{'syntax': 'markdown', 'ext': 'md'}]
