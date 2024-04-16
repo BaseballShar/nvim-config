@@ -13,10 +13,10 @@ nnoremap <silent> <Space>e :NERDTreeToggle<CR>
 
 " Move lines up and down
 " ESC maps to ALT in mac
-nnoremap <silent> <M-j> :m+1<CR>
-nnoremap <silent> <M-k> :m-2<CR>
-vnoremap <silent> <M-j> :m'>+1<CR>gv
-vnoremap <silent> <M-k> :m'<-2<CR>gv
+nnoremap <silent> <A-j> :m+1<CR>
+nnoremap <silent> <A-k> :m-2<CR>
+vnoremap <silent> <A-j> :m'>+1<CR>gv
+vnoremap <silent> <A-k> :m'<-2<CR>gv
 
 " Inserting a line of space ,ignoring comments
 nnoremap <silent> <Space>o o<Esc>S<Esc>k

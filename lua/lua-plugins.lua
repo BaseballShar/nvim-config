@@ -26,3 +26,20 @@ require('toggleterm').setup {size = 25, open_mapping = [[<C-t>]]}
 
 -- Should provide better commenting for CODE!
 require('Comment').setup()
+
+-- Mini plugins
+require('mini.starter').setup({
+  header = "Welcome Fisher Baseball\nTime for some bruh work!",
+})
+require('mini.ai').setup()
+require('mini.jump').setup({
+  delay = {
+    idle_stop = 1000,
+  }
+})
+require('mini.align').setup()
+
+-- Indent blanklines
+require('ibl').setup{
+  scope = {enabled = false},
+}
