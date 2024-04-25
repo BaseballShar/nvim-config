@@ -39,5 +39,8 @@ nnoremap <silent> <C-k> <C-w>k
 nnoremap <silent> <Space>q :qa!<CR>
 nnoremap <silent> <Space>s :w<CR>
 
-" No search highlighting
-" nnoremap <silent> <Space>h :noh<CR>
+" Quick move bindings
+nnoremap <silent> ]q :cnext<CR>
+nnoremap <silent> [q :cprev<CR>
+nnoremap <silent> ]Q :clast<CR>
+nnoremap <silent> [Q :cfirst<CR>

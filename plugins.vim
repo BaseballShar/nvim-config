@@ -1,6 +1,12 @@
 " Plugins
 call plug#begin()
 
+" Tmux loves vim
+Plug 'christoomey/vim-tmux-navigator'
+
+" Kitty scrollback in nvim
+Plug 'mikesmithgh/kitty-scrollback.nvim'
+
 " Minimal plugins
 Plug 'echasnovski/mini.nvim', { 'branch': 'stable' }
 
