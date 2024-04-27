@@ -33,7 +33,7 @@ Plug 'lervag/vimtex', {'tag': 'v2.13'}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Snippets!
-Plug 'honza/vim-snippets'
+" Plug 'honza/vim-snippets'
 
 " Wine Linter
 Plug 'w0rp/ale'

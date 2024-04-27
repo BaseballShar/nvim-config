@@ -1,3 +1,7 @@
+" Allow small jumps in insert mode
+inoremap <C-e> <Esc>wa
+inoremap <C-b> <Esc>bi
+
 " Center after moving pages
 nnoremap <silent> <C-u> <C-u>zz
 nnoremap <silent> <C-d> <C-d>zz

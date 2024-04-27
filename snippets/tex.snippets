@@ -1,3 +1,4 @@
+# Preable templates
 snippet tproof
 \documentclass[a4paper,10pt]{article}
 \usepackage[margin=2cm]{geometry}
@@ -143,3 +144,78 @@ snippet tnote
 ${2:content}
 
 \end{document}
+
+# Environment snippets
+snippet sec
+\section{${1:name}}
+
+snippet ssec
+\subsection{${1:name}}
+
+snippet begin
+\begin{${1:env}}
+\end{${1:env}}
+
+snippet table
+\begin{tabular}{${1:|c|c|}}
+	${2:content}
+\end{tabular}
+
+snippet fig
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=${1:0.5}\textwidth]{${2:figure}}
+	\caption{${3:caption}}
+	\label{fig:${4:label}}
+\end{figure}
+
+# Math formatting snippets
+snippet eqn
+$${1:content}$
+
+snippet Eqn
+\begin{equation*}
+	${1:content}
+\end{equation*}
+
+snippet align
+\begin{align*}
+	${1:content}
+\end{align*}
+
+snippet sum
+\sum_{${1:sub}}^{${2:sup}} ${3:expr}
+
+snippet prod
+\prod_{${1:sub}}^{${2:sup}} ${3:expr}
+
+snippet vec
+\vec{$1}
+
+snippet hat
+\hat{$1}
+
+# Greek letters
+snippet alp
+\alpha
+
+snippet bet
+\beta
+
+snippet gam
+\gamma
+
+snippet del
+\delta
+
+snippet eps
+\epsilon
+
+snippet the
+\theta
+
+snippet lam
+\lambda
+
+snippet pi
+\pi
