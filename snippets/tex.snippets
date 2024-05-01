@@ -171,7 +171,7 @@ snippet fig
 
 # Math formatting snippets
 snippet eqn
-$${1:content}$
+$${1:content}$$2
 
 snippet Eqn
 \begin{equation*}
@@ -183,17 +183,20 @@ snippet align
 	${1:content}
 \end{align*}
 
+snippet frac
+\frac{$1}{$2}$3
+
 snippet sum
-\sum_{${1:sub}}^{${2:sup}} ${3:expr}
+\sum_{${1:sub}}^{${2:sup}} ${3:expr}$4
 
 snippet prod
-\prod_{${1:sub}}^{${2:sup}} ${3:expr}
+\prod_{${1:sub}}^{${2:sup}} ${3:expr}$4
 
 snippet vec
-\vec{$1}
+\vec{$1}$2
 
 snippet hat
-\hat{$1}
+\hat{$1}$2
 
 # Greek letters
 snippet alp
@@ -219,3 +222,16 @@ snippet lam
 
 snippet pi
 \pi
+
+# Formatting snippets
+snippet bf
+\textbf{$1}
+
+snippet it
+\textit{$1}
+
+snippet un
+\underline{$1}
+
+snippet text
+\text{$1}

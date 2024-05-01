@@ -116,7 +116,17 @@ nnoremap <Space>b <cmd>Telescope buffers<CR>
 " nnoremap <Space>sc <cmd>Telescope git_commits<CR>
 " nnoremap <Space>ss <cmd>Telescope git_status<CR>
 
+" Default to disable
 autocmd BufRead *.tex ALEDisable
+
+let g:copilot_filetypes = {
+      \ '*': v:false,
+      \ 'fish': v:true,
+      \ }
+
+" Autopairs settings
+" Define new pairs in filetypes
+autocmd FileType tex let b:AutoPairs = AutoPairsDefine({'$':'$'})
 
 augroup autoformat_settings
   autocmd BufRead * NoAutoFormatBuffer
