@@ -12,7 +12,10 @@ require('bufferline').setup()
 
 -- Huge and colourful tree!
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = "all",
+  ensure_installed = {
+    "c", "cpp", "haskell", "html", "javascript", "typescript",
+    "python", "lua", "vim"
+  },
   auto_install = true,
   -- To prevent conflict with vim-tex
   ignore_install = {"latex"},
@@ -46,3 +49,32 @@ require('ibl').setup{
 
 -- Kitty scrollback
 require('kitty-scrollback').setup()
+
+-- Telescope settings
+require('telescope').setup({
+  defaults = {
+    mappings = {
+      i = {
+        ["<C-j>"] = "move_selection_next",
+        ["<C-k>"] = "move_selection_previous",
+      },
+    },
+  },
+  pickers = {
+    find_files = {
+      theme = "dropdown",
+    }
+  },
+  extensions = {
+    fzf = {
+      fuzzy = true,
+      override_generic_sorter = true,
+      override_file_sorter = true,
+    }
+  }
+})
+
+-- Use fzf algorithm and syntax for telescope
+require('telescope').load_extension('fzf')
+-- Integration Telescope with zoxide
+require("telescope").load_extension('zoxide')

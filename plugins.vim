@@ -18,8 +18,11 @@ Plug 'rebelot/kanagawa.nvim'
 Plug 'akinsho/toggleterm.nvim', {'tag' : 'v2.9.0'}
 
 " Stare into the stars
+Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-fzf-native.nvim', {'do': 'make'}
+Plug 'jvgrootveld/telescope-zoxide'
 
 " Git integrations
 Plug 'tpope/vim-fugitive'

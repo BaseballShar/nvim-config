@@ -35,14 +35,20 @@ autocmd FileType tex let b:AutoPairs = AutoPairsDefine({'$':'$'})
 
 " ------ Search Config ------
 " Telescope toolbelts
-nnoremap <Space>f <cmd>Telescope find_files theme=dropdown<CR>
-" nnoremap <Space>sg <cmd>Telescope live_grep theme=dropdown<CR>
-nnoremap <Space>g :Ag<CR>
-nnoremap <Space>b <cmd>Telescope buffers<CR>
-" nnoremap <Space>sh <cmd>Telescope help_tags<CR>
-" nnoremap <Space>sk <cmd>Telescope keymaps<CR>
-" nnoremap <Space>sc <cmd>Telescope git_commits<CR>
-" nnoremap <Space>ss <cmd>Telescope git_status<CR>
+nnoremap <Space>b :Telescope buffers<CR>
+nnoremap <Space>f :Telescope find_files<CR>
+" Search current buffer
+nnoremap <Space>gb :Telescope current_buffer_fuzzy_find<CR>
+" Search opened files
+nnoremap <Space>gf :Lines<CR>
+" Search under current directory
+nnoremap <Space>gg :Rg<CR>
+nnoremap <Space>gc :Telescope commands<CR>
+nnoremap <Space>gd :Telescope zoxide list<CR>
+nnoremap <Space>gm :Telescope marks<CR>
+nnoremap <Space>gh :Telescope oldfiles<CR>
+nnoremap <Space>gr :Telescope registers<CR>
+nnoremap <Space>gk :Telescope keymaps<CR>
 
 " NerdTree settings
 let g:nerdtree_vis_confirm_open = 0
