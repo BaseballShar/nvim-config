@@ -20,7 +20,34 @@ require("lazy").setup({
   {
     "nvim-telescope/telescope.nvim",
     branch = "0.1.x",
-    dependencies = { "nvim-lua/plenary.nvim" }
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("telescope").setup({
+        pickers = {
+          find_files = {
+            theme = "dropdown",
+          }
+        },
+        defaults = {
+          mappings = {
+            i = {
+              ["<C-j>"] = "move_selection_next",
+              ["<C-k>"] = "move_selection_previous",
+            },
+          },
+        },
+      })
+      local builtin = require("telescope.builtin")
+      local keymap = vim.keymap.set
+      keymap('n', '<Leader>f', builtin.find_files)
+      keymap('n', '<Leader>b', builtin.buffers)
+      keymap('n', '<Leader>gb', builtin.current_buffer_fuzzy_find)
+      keymap('n', '<Leader>gc', builtin.commands)
+      keymap('n', '<Leader>gm', builtin.marks)
+      keymap('n', '<Leader>gh', builtin.oldfiles)
+      keymap('n', '<Leader>gr', builtin.registers)
+      keymap('n', '<Leader>gk', builtin.keymaps)
+    end,
   },
   "junegunn/fzf",
   "junegunn/fzf.vim",

@@ -24,20 +24,11 @@ autocmd FileType tex nnoremap <silent> <buffer> <Space>lt :VimtexTocToggle<CR>
 " ------ End Utility ------
 
 " ------ Search Config ------
-" Telescope toolbelts
-nnoremap <Space>b :Telescope buffers<CR>
-nnoremap <Space>f :Telescope find_files<CR>
-" Search current buffer
-nnoremap <Space>gb :Telescope current_buffer_fuzzy_find<CR>
 " Search opened files
 nnoremap <Space>gf :Lines<CR>
 " Search under current directory
 nnoremap <Space>gg :Rg<CR>
-nnoremap <Space>gc :Telescope commands<CR>
-nnoremap <Space>gm :Telescope marks<CR>
-nnoremap <Space>gh :Telescope oldfiles<CR>
-nnoremap <Space>gr :Telescope registers<CR>
-nnoremap <Space>gk :Telescope keymaps<CR>
+
 " ------ End Search ------
 
 " ------ Code Completion and Linting Config ------
