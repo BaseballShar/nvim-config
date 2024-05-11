@@ -13,7 +13,7 @@ nnoremap <silent> <S-h> :bp<CR>
 nnoremap <silent> <S-l> :bn<CR>
 
 " Open file explorer in a split screen
-nnoremap <silent> <Space>e :NERDTreeToggle<CR>
+nnoremap <silent> <Space>e :NvimTreeToggle<CR>
 
 " Move lines up and down
 " ESC maps to ALT in mac
@@ -21,6 +21,13 @@ nnoremap <silent> <A-j> :m+1<CR>
 nnoremap <silent> <A-k> :m-2<CR>
 vnoremap <silent> <A-j> :m'>+1<CR>gv
 vnoremap <silent> <A-k> :m'<-2<CR>gv
+
+" Change split sizes
+nnoremap <silent> <S-Right> :vertical resize +2<CR>
+nnoremap <silent> <S-Left> :vertical resize -2<CR>
+nnoremap <silent> <S-Up> :resize -2<CR>
+nnoremap <silent> <S-Down> :resize +2<CR>
+nnoremap <silent> + <C-w>=
 
 " Inserting a line of space ,ignoring comments
 nnoremap <silent> <Space>o o<Esc>S<Esc>k
@@ -48,3 +55,6 @@ nnoremap <silent> ]q :cnext<CR>
 nnoremap <silent> [q :cprev<CR>
 nnoremap <silent> ]Q :clast<CR>
 nnoremap <silent> [Q :cfirst<CR>
+
+" Terminal keymaps
+tnoremap jk <Esc>
