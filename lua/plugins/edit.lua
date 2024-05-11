@@ -3,7 +3,21 @@ return {
   "tpope/vim-surround",
 
   -- An array of useful mini features
-  { "echasnovski/mini.nvim", version = '*' },
+  {
+    "echasnovski/mini.nvim",
+    version = '*',
+    config = function()
+      require("mini.starter").setup({
+        header = "Welcome Fisher Baseball\nTime for some bruh work!",
+      })
+      require("mini.ai").setup()
+      require("mini.jump").setup({
+        delay = {
+          idle_stop = 1000,
+        }
+      })
+    end,
+  },
 
   -- Auto close pairs
   {

@@ -58,10 +58,15 @@ return {
       keymap("n", "<Leader>gf", ":Lines<CR>", opts)
     end,
   },
-  -- Nvim File Free
+  -- Breathable air for nvim
   {
     "nvim-tree/nvim-tree.lua",
     config = function()
+      require("nvim-tree").setup({
+        filters = {
+          dotfiles = true
+        }
+      })
       keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
     end,
   },

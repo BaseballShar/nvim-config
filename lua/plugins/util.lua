@@ -8,13 +8,31 @@ return {
   "romainl/vim-cool",
 
   -- Offers indent guide
-  "lukas-reineke/indent-blankline.nvim",
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      require("ibl").setup{
+        scope = {enabled = false},
+      }
+    end,
+  },
 
   -- Git plugins
   -- Shows sign columns and hunk text objects
   "airblade/vim-gitgutter",
 
-  { "akinsho/toggleterm.nvim", tag = "v2.11.0" },
+  -- A Terminal inside a vim run by another terminal
+  {
+    "akinsho/toggleterm.nvim",
+    tag = "v2.11.0",
+    config = function()
+      require("toggleterm").setup({
+        size = 15,
+        direction = "float",
+        open_mapping = [[<A-1>]],
+      })
+    end,
+  },
 
   {
     "vimwiki/vimwiki",

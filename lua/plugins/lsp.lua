@@ -2,10 +2,32 @@ local keymap = vim.keymap.set
 
 return {
   -- Comments all the way
-  "numToStr/Comment.nvim",
+  {
+    "numToStr/Comment.nvim",
+    config = function()
+      require("Comment").setup()
+    end,
+  },
 
   -- Treesitter oxygenates your language parsers
-  { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function()
+      -- Huge and colourful tree!
+      require("nvim-treesitter.configs").setup({
+        ensure_installed = {
+          "c", "cpp", "haskell", "html", "javascript", "typescript",
+          "python", "lua", "vim", "java",
+        },
+        -- Avoid conflicts with vimtex
+        ignore_install = {"latex"},
+        auto_install = true,
+        highlight = {enable = true, additional_vim_regex_highlighting = false},
+        indent = {enable = true}
+      })
+    end,
+  },
 
   -- Mason the medieval lsp gather
   {
