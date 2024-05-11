@@ -7,6 +7,11 @@ return {
     "nvim-telescope/telescope.nvim",
     branch = "0.1.x",
     dependencies = { "nvim-lua/plenary.nvim" },
+    keys = {
+      "<Leader>b",
+      "<Leader>f",
+      "<Leader>g",
+    },
     config = function()
       require("telescope").setup({
         pickers = {
@@ -37,6 +42,12 @@ return {
   -- Telescope ui select
   {
     "nvim-telescope/telescope-ui-select.nvim",
+    dependencies = "nvim-telescope/telescope.nvim",
+    keys = {
+      "<Leader>b",
+      "<Leader>f",
+      "<Leader>g",
+    },
     config = function()
       local telescope = require("telescope")
       telescope.setup({
@@ -61,6 +72,7 @@ return {
   -- Breathable air for nvim
   {
     "nvim-tree/nvim-tree.lua",
+    keys = "<Leader>e",
     config = function()
       require("nvim-tree").setup({
         filters = {

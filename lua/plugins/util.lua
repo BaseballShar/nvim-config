@@ -36,6 +36,8 @@ return {
 
   {
     "vimwiki/vimwiki",
+    keys = "<Leader>ww",
+    ft = {"markdown", "vimwiki"},
     init = function()
       vim.g.vimwiki_list = {{ syntax = 'markdown', ext = 'md' }}
     end,
