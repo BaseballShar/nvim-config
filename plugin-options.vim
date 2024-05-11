@@ -44,8 +44,4 @@ let g:copilot_filetypes = {
       \ '*': v:false,
       \ 'fish': v:true,
       \ }
-
-" Mason and LSP settings
-nnoremap <Space>ms :Mason<CR>
-nnoremap <Space>ml :LspInfo<CR>
 " ------ End Code Completion ------

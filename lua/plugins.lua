@@ -64,9 +64,39 @@ require("lazy").setup({
   -- Language support plugins
   "numToStr/Comment.nvim",
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-  "williamboman/mason.nvim",
-  "williamboman/mason-lspconfig.nvim",
-  "neovim/nvim-lspconfig",
+  -- Mason lsp manager
+  {
+    "williamboman/mason.nvim",
+    config = function()
+      require("mason").setup()
+      vim.keymap.set('n', '<Leader>ms', ':Mason<CR>')
+    end,
+  },
+  -- Mason lspconfig
+  {
+    "williamboman/mason-lspconfig.nvim",
+    config = function()
+      require("mason-lspconfig").setup({
+        ensure_installed = {"lua_ls"}
+      })
+    end,
+  },
+  -- nvim lspconfig
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      local lspconfig = require("lspconfig")
+      lspconfig.lua_ls.setup({})
+
+      vim.keymap.set('n', '<Leader>ml', ':LspInfo<CR>')
+      vim.keymap.set('n', 'K', vim.lsp.buf.hover)
+      vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help)
+      vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
+      vim.keymap.set('n', 'gr', vim.lsp.buf.references)
+      vim.keymap.set('n', 'rn', vim.lsp.buf.rename)
+      vim.keymap.set('n', '<Space>ca', vim.lsp.buf.code_action)
+    end,
+  },
 
   -- Utility plugins
   { "akinsho/toggleterm.nvim", tag = "v2.11.0" },
