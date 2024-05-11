@@ -12,9 +12,6 @@ nnoremap <silent> <C-b> <C-b>zz
 nnoremap <silent> <S-h> :bp<CR>
 nnoremap <silent> <S-l> :bn<CR>
 
-" Open file explorer in a split screen
-nnoremap <silent> <Space>e :NvimTreeToggle<CR>
-
 " Move lines up and down
 " ESC maps to ALT in mac
 nnoremap <silent> <A-j> :m+1<CR>

@@ -1,15 +1,3 @@
--- A Nice and highly customisible statusline for vim
-require("lualine").setup {
-  sections = {
-    lualine_b = {"branch", "diff"},
-    lualine_c = {"g:coc_status"},
-    lualine_x = {"diagnostics"}
-  }
-}
-
--- A decent buffer indicator for vim
-require("bufferline").setup()
-
 -- A Terminal inside a vim run by another terminal
 require("toggleterm").setup({
   size = 15,
@@ -35,8 +23,10 @@ require("mini.jump").setup({
 require("nvim-treesitter.configs").setup({
   ensure_installed = {
     "c", "cpp", "haskell", "html", "javascript", "typescript",
-    "python", "lua", "vim", "java"
+    "python", "lua", "vim", "java",
   },
+  -- Avoid conflicts with vimtex
+  ignore_install = {"latex"},
   auto_install = true,
   highlight = {enable = true, additional_vim_regex_highlighting = false},
   indent = {enable = true}
