@@ -25,6 +25,7 @@ return {
   {
     "akinsho/toggleterm.nvim",
     tag = "v2.11.0",
+    keys = "<A-1>",
     config = function()
       require("toggleterm").setup({
         size = 15,
