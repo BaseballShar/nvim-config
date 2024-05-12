@@ -1,4 +1,10 @@
 local keymap = vim.keymap.set
+local lsp_servers = {
+  "lua_ls",
+  "tsserver",
+  "pyright",
+  "hls",
+}
 
 return {
   -- Comments all the way
@@ -34,7 +40,7 @@ return {
     "williamboman/mason.nvim",
     config = function()
       require("mason").setup()
-      keymap('n', '<Leader>ms', ':Mason<CR>')
+      keymap('n', '<Leader>m', ':Mason<CR>')
     end,
   },
 
@@ -43,7 +49,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_installed = {"lua_ls", "tsserver"}
+        ensure_installed = lsp_servers
       })
     end,
   },
@@ -53,10 +59,11 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       local lspconfig = require("lspconfig")
-      lspconfig.lua_ls.setup({})
-      lspconfig.tsserver.setup({})
+      for _, server in ipairs(lsp_servers) do
+        lspconfig[server].setup({})
+      end
 
-      keymap('n', '<Leader>ml', ':LspInfo<CR>')
+      keymap('n', '<Leader>k', ':LspInfo<CR>')
       keymap('n', 'K', vim.lsp.buf.hover)
       keymap('n', '<C-k>', vim.lsp.buf.signature_help)
       keymap('n', 'gd', vim.lsp.buf.definition)
@@ -125,13 +132,11 @@ return {
 
       -- Set up lspconfig.
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
-      -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-      require('lspconfig')['lua_ls'].setup {
-        capabilities = capabilities
-      }
-      require('lspconfig')['tsserver'].setup {
-        capabilities = capabilities
-      }
+      for _, server in ipairs(lsp_servers) do
+        require('lspconfig')[server].setup({
+          capabilities = capabilities
+        })
+      end
     end,
   },
 
