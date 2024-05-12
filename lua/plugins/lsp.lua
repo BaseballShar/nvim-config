@@ -89,10 +89,6 @@ return {
     event = "InsertEnter"
   },
   {
-    "neovim/nvim-lspconfig",
-    event = "InsertEnter"
-  },
-  {
     "hrsh7th/nvim-cmp",
     event = "InsertEnter",
     config = function()
