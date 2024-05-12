@@ -9,12 +9,12 @@ return {
       vim.g.copilot_no_tab_map = true
 
       vim.cmd('inoremap <silent><script><expr> <C-CR> copilot#Accept("")')
-      keymap('i', '<C-l>', '<Plug>(copilot-accept-line)', { silent = true })
-      keymap('i', '<C-w>', '<Plug>(copilot-accept-word)', { silent = true })
+      keymap("i", "<C-l>", "<Plug>(copilot-accept-line)", { silent = true })
+      keymap("i", "<C-w>", "<Plug>(copilot-accept-word)", { silent = true })
 
       -- Only enable copilot in these filetypes
       vim.g.copilot_filetypes = {
-        ['*'] = false,
+        ["*"] = false,
         fish = true,
       }
     end,

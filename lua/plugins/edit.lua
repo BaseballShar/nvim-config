@@ -5,7 +5,7 @@ return {
   -- An array of useful mini features
   {
     "echasnovski/mini.nvim",
-    version = '*',
+    version = "*",
     config = function()
       require("mini.starter").setup({
         header = "Welcome Fisher Baseball\nTime for some bruh work!",
@@ -14,7 +14,7 @@ return {
       require("mini.jump").setup({
         delay = {
           idle_stop = 1000,
-        }
+        },
       })
     end,
   },
@@ -23,7 +23,7 @@ return {
   {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
-    config = true
+    config = true,
   },
 
   -- LaTeX >>> Word
@@ -34,8 +34,8 @@ return {
     config = function()
       -- Disable auto popup of quickfix window
       vim.g.vimtex_quickfix_mode = 0
-      vim.g.tex_flavor = 'latex'
-      vim.g.vimtex_view_method = 'skim'
+      vim.g.tex_flavor = "latex"
+      vim.g.vimtex_view_method = "skim"
       -- Value 1 allows forward search after every successful compilation
       vim.g.vimtex_view_skim_sync = 1
       -- Value 1 allows chanvim.ge focus to skim after command `.VimtexView` is given

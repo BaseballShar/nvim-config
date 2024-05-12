@@ -1,5 +1,5 @@
 local keymap = vim.keymap.set
-local opts = {silent = true}
+local opts = { silent = true }
 
 return {
   -- Telescope
@@ -17,7 +17,7 @@ return {
         pickers = {
           find_files = {
             theme = "dropdown",
-          }
+          },
         },
         defaults = {
           mappings = {
@@ -53,9 +53,9 @@ return {
       telescope.setup({
         extensions = {
           ["ui-select"] = {
-            require("telescope.themes").get_dropdown{}
-          }
-        }
+            require("telescope.themes").get_dropdown({}),
+          },
+        },
       })
       telescope.load_extension("ui-select")
     end,

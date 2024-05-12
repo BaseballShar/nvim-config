@@ -5,18 +5,16 @@ return {
     config = function()
       require("lualine").setup({
         sections = {
-          lualine_b = {"filename"},
+          lualine_b = { "filename" },
           lualine_c = {},
-          lualine_x = {"diagnostics"},
-          lualine_y = {"diff", "branch"},
-          lualine_z = {"location"},
-          -- lualine_z = {"diagnostics"}
+          lualine_x = { "diagnostics" },
+          lualine_y = { "diff", "branch" },
+          lualine_z = { "location" },
         },
         options = {
           component_separators = "",
-          -- section_separators = "",
-        }
+        },
       })
     end,
-  }
+  },
 }

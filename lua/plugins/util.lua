@@ -11,13 +11,12 @@ return {
   {
     "lukas-reineke/indent-blankline.nvim",
     config = function()
-      require("ibl").setup{
-        scope = {enabled = false},
-      }
+      require("ibl").setup({
+        scope = { enabled = false },
+      })
     end,
   },
 
-  -- Git plugins
   -- Shows sign columns and hunk text objects
   "airblade/vim-gitgutter",
 
@@ -38,12 +37,12 @@ return {
   {
     "vimwiki/vimwiki",
     keys = "<Leader>ww",
-    ft = {"markdown", "vimwiki"},
+    ft = { "markdown", "vimwiki" },
     init = function()
-      vim.g.vimwiki_list = {{ syntax = 'markdown', ext = 'md' }}
+      vim.g.vimwiki_list = { { syntax = "markdown", ext = "md" } }
     end,
     config = function()
-      keymap({"n", "v"}, "<M-Space>", "<Plug>VimwikiToggleListItem")
+      keymap({ "n", "v" }, "<M-Space>", "<Plug>VimwikiToggleListItem")
     end,
   },
 
