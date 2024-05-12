@@ -71,15 +71,17 @@ return {
   },
   -- Breathable air for nvim
   {
-    "nvim-tree/nvim-tree.lua",
+    "nvim-neo-tree/neo-tree.nvim",
+    branch = "v3.x",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-tree/nvim-web-devicons",
+      "MunifTanjim/nui.nvim",
+    },
     keys = "<Leader>e",
     config = function()
-      require("nvim-tree").setup({
-        filters = {
-          dotfiles = true
-        }
-      })
-      keymap("n", "<Leader>e", ":NvimTreeToggle<CR>", opts)
+      require("neo-tree").setup({})
+      keymap("n", "<Leader>e", ":Neotree toggle<CR>", opts)
     end,
   },
 }
