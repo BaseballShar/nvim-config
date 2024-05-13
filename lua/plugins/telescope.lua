@@ -7,11 +7,6 @@ return {
     "nvim-telescope/telescope.nvim",
     branch = "0.1.x",
     dependencies = { "nvim-lua/plenary.nvim" },
-    keys = {
-      "<Leader>b",
-      "<Leader>f",
-      "<Leader>g",
-    },
     config = function()
       require("telescope").setup({
         pickers = {
@@ -43,11 +38,6 @@ return {
   {
     "nvim-telescope/telescope-ui-select.nvim",
     dependencies = "nvim-telescope/telescope.nvim",
-    keys = {
-      "<Leader>b",
-      "<Leader>f",
-      "<Leader>g",
-    },
     config = function()
       local telescope = require("telescope")
       telescope.setup({
