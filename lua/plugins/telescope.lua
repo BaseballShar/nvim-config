@@ -59,19 +59,4 @@ return {
       keymap("n", "<Leader>gf", ":Lines<CR>", opts)
     end,
   },
-  -- Breathable air for nvim
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
-      "MunifTanjim/nui.nvim",
-    },
-    keys = "<Leader>e",
-    config = function()
-      require("neo-tree").setup({})
-      keymap("n", "<Leader>e", ":Neotree toggle<CR>", opts)
-    end,
-  },
 }
