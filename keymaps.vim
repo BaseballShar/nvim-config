@@ -1,3 +1,14 @@
+" Inspired by helix
+" Better intraline movement
+nnoremap <silent> gh _
+vnoremap <silent> gh _
+nnoremap <silent> gl $
+vnoremap <silent> gl $
+
+" U for redo, <C-r> for line restore
+nnoremap <silent> U <C-r>
+nnoremap <silent> <C-r> U
+
 " Allow small jumps in insert mode
 inoremap <C-e> <Esc>wa
 inoremap <C-b> <Esc>bi
