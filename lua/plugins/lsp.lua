@@ -83,7 +83,7 @@ return {
       keymap("n", "gr", vim.lsp.buf.references)
       keymap("n", "rn", vim.lsp.buf.rename)
       keymap("n", "<Space>ca", vim.lsp.buf.code_action)
-      keymap("n", "<Space>cf", vim.lsp.buf.format)
+      -- keymap("n", "<Space>cf", vim.lsp.buf.format)
     end,
   },
 

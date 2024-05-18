@@ -8,7 +8,7 @@ return {
 		local null_ls = require("null-ls")
 		null_ls.setup({
 			sources = {
-				null_ls.builtins.formatting.stylua,
+				-- null_ls.builtins.formatting.stylua,
 			},
 		})
 
@@ -27,6 +27,15 @@ return {
 			callback = function()
 				keymap("n", "<Leader>cf", ":%!prettier --stdin-filepath %<CR>", opts)
 				keymap("x", "<Leader>cf", ":'<,'>!prettier --stdin-filepath %<CR>", opts)
+			end,
+		})
+
+		-- Lua formatting
+		autocmd("Filetype", {
+			pattern = { "lua" },
+			callback = function()
+				keymap("n", "<Leader>cf", ":%!stylua -<CR>", opts)
+				keymap("x", "<Leader>cf", ":'<,'>!stylua -<CR>", opts)
 			end,
 		})
 	end,
