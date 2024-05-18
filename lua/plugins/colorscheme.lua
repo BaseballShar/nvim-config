@@ -6,6 +6,7 @@ return {
     priority = 1000,
     config = function()
       vim.cmd("colorscheme everforest")
+      vim.cmd("autocmd FileType vifm set ft=vim")
     end,
   },
   "rebelot/kanagawa.nvim",

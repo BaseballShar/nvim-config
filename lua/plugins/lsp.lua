@@ -5,6 +5,7 @@ local lsp_servers = {
   "pyright",
   "hls",
   "vimls",
+  "texlab",
 }
 
 return {
