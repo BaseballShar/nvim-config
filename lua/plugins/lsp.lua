@@ -78,7 +78,7 @@ return {
 
       keymap("n", "<Leader>k", ":LspInfo<CR>")
       keymap("n", "K", vim.lsp.buf.hover)
-      keymap("n", "<C-k>", vim.lsp.buf.signature_help)
+      keymap("n", "gi", vim.lsp.buf.implementation)
       keymap("n", "gd", vim.lsp.buf.definition)
       keymap("n", "gr", vim.lsp.buf.references)
       keymap("n", "rn", vim.lsp.buf.rename)
