@@ -10,7 +10,7 @@ return {
 			vim.g.copilot_no_tab_map = true
 
 			-- Keymaps for accepting suggestions
-			vim.cmd('inoremap <silent><script><expr> <C-CR> copilot#Accept("")')
+			vim.cmd('inoremap <silent><script><expr> <C-k> copilot#Accept("")')
 			keymap("i", "<C-l>", "<Plug>(copilot-accept-line)", { silent = true })
 			keymap("i", "<C-w>", "<Plug>(copilot-accept-word)", { silent = true })
 
