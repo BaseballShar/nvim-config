@@ -83,7 +83,6 @@ return {
       keymap("n", "gr", vim.lsp.buf.references)
       keymap("n", "rn", vim.lsp.buf.rename)
       keymap("n", "<Space>ca", vim.lsp.buf.code_action)
-      -- keymap("n", "<Space>cf", vim.lsp.buf.format)
     end,
   },
 
@@ -99,14 +98,9 @@ return {
 
       cmp.setup({
         snippet = {
-          -- REQUIRED - you must specify a snippet engine
           expand = function(args)
             require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
           end,
-        },
-        window = {
-          -- completion = cmp.config.window.bordered(),
-          -- documentation = cmp.config.window.bordered(),
         },
         mapping = cmp.mapping.preset.insert({
           ["<Tab>"] = cmp.mapping.select_next_item(),
@@ -118,8 +112,8 @@ return {
         sources = cmp.config.sources({
           { name = "nvim_lsp" },
           { name = "luasnip" }, -- For luasnip users.
-        }, {
           { name = "buffer" },
+          { name = "path" },
         }),
       })
 
