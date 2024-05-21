@@ -6,6 +6,8 @@ local lsp_servers = {
   "hls",
   "vimls",
   "texlab",
+  "html",
+  "cssls",
 }
 
 return {

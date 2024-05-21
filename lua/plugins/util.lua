@@ -55,4 +55,7 @@ return {
       vim.g.Hexokinase_optInPatterns = { "full_hex" }
     end,
   },
+
+  -- Repeat everything
+  "tpope/vim-repeat",
 }
