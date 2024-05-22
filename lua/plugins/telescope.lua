@@ -32,6 +32,7 @@ return {
       keymap("n", "<Leader>gh", builtin.oldfiles)
       keymap("n", "<Leader>gr", builtin.registers)
       keymap("n", "<Leader>gk", builtin.keymaps)
+      keymap("n", "<Leader>gd", builtin.diagnostics)
     end,
   },
   -- Telescope ui select
