@@ -58,4 +58,7 @@ return {
 
   -- Repeat everything
   "tpope/vim-repeat",
+
+  -- Git integration
+  "tpope/vim-fugitive",
 }

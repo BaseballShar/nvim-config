@@ -13,6 +13,9 @@ return {
           find_files = {
             theme = "dropdown",
           },
+          grep_string = {
+            search = "",
+          },
         },
         defaults = {
           mappings = {
@@ -26,6 +29,7 @@ return {
       local builtin = require("telescope.builtin")
       keymap("n", "<Leader>f", builtin.find_files)
       keymap("n", "<Leader>b", builtin.buffers)
+      keymap("n", "<Leader>gg", builtin.grep_string)
       keymap("n", "<Leader>gb", builtin.current_buffer_fuzzy_find)
       keymap("n", "<Leader>gc", builtin.commands)
       keymap("n", "<Leader>gm", builtin.marks)
@@ -56,8 +60,16 @@ return {
     "junegunn/fzf",
     dependencies = "junegunn/fzf.vim",
     config = function()
-      keymap("n", "<Leader>gg", ":Rg<CR>", opts)
+      -- keymap("n", "<Leader>gg", ":Rg<CR>", opts)
       keymap("n", "<Leader>gf", ":Lines<CR>", opts)
+    end,
+  },
+  -- fzf to telescope
+  {
+    'nvim-telescope/telescope-fzf-native.nvim',
+    build = 'make',
+    config = function()
+      require('telescope').load_extension('fzf')
     end,
   },
 }
