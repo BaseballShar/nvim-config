@@ -8,6 +8,7 @@ local lsp_servers = {
   "texlab",
   "html",
   "cssls",
+  "emmet_language_server",
 }
 
 return {
