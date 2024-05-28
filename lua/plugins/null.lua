@@ -10,7 +10,7 @@ local format_configs = {
 		flag = "-",
 	},
 	{
-		filetype = { "html", "css", "javascript", "typescript" },
+		filetype = { "html", "css", "javascript", "javascriptreact", "typescript" },
 		formatter = "prettier",
 		flag = "--stdin-filepath %",
 	},
