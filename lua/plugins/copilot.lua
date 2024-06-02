@@ -1,5 +1,6 @@
 local keymap = vim.keymap.set
 local user_command = vim.api.nvim_create_user_command
+local autocmd = vim.api.nvim_create_autocmd
 
 return {
 	-- Annoying copilot
@@ -13,6 +14,7 @@ return {
 			vim.cmd('inoremap <silent><script><expr> <C-k> copilot#Accept("")')
 			keymap("i", "<C-l>", "<Plug>(copilot-accept-line)", { silent = true })
 			keymap("i", "<C-w>", "<Plug>(copilot-accept-word)", { silent = true })
+			keymap("n", "<Leader>cp", ":CopilotToggle<CR>", { silent = true })
 
 			-- A Vim function for toggling copilot
 			local copilot_on = true
@@ -26,7 +28,13 @@ return {
 				end
 				copilot_on = not copilot_on
 			end, { nargs = 0 })
-			vim.keymap.set("", "<Leader>cp", ":CopilotToggle<CR>", { silent = true })
+
+      -- Disable copilot on start up
+      autocmd("VimEnter", {
+        callback = function()
+          vim.cmd("CopilotToggle")
+        end,
+      })
 		end,
 	},
 }

@@ -9,6 +9,7 @@ local lsp_servers = {
   "html",
   "cssls",
   "emmet_language_server",
+  "tailwindcss",
 }
 
 return {
