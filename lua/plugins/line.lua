@@ -8,7 +8,7 @@ return {
           lualine_b = { "filename" },
           lualine_c = {},
           lualine_x = { "diagnostics" },
-          lualine_y = { "diff", "branch", },
+          lualine_y = { "diff", "branch" },
           lualine_z = { "location" },
         },
         options = {

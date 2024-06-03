@@ -40,16 +40,18 @@ return {
       vim.g.vimtex_view_skim_sync = 1
       -- Value 1 allows chanvim.ge focus to skim after command `.VimtexView` is given
       vim.g.vimtex_view_skim_activate = 1
-      vim.cmd("autocmd FileType tex nnoremap <silent> <buffer> <Space>lt :VimtexTocToggle<CR>")
+      vim.cmd(
+        "autocmd FileType tex nnoremap <silent> <buffer> <Space>lt :VimtexTocToggle<CR>"
+      )
     end,
   },
 
-	-- Jump to everywhere within 4 strokes
-	{
-		"ggandor/leap.nvim",
-		config = function()
-			vim.keymap.set("n", "s", "<Plug>(leap)")
-			vim.keymap.set("n", "gs", "<Plug>(leap-from-window)")
-		end,
-	},
+  -- Jump to everywhere within 4 strokes
+  {
+    "ggandor/leap.nvim",
+    config = function()
+      vim.keymap.set("n", "s", "<Plug>(leap)")
+      vim.keymap.set("n", "gs", "<Plug>(leap-from-window)")
+    end,
+  },
 }
