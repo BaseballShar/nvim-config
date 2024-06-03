@@ -17,7 +17,7 @@ local format_configs = {
 	{
 		filetype = "lua",
 		formatter = "stylua",
-		flag = "-",
+		flag = "--indent-type Spaces --indent-width 2 --column-width 80 -",
 	},
 }
 
