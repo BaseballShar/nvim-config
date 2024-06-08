@@ -60,5 +60,10 @@ return {
   "tpope/vim-repeat",
 
   -- Git integration
-  "tpope/vim-fugitive",
+  {
+    "tpope/vim-fugitive",
+    config = function()
+      keymap("n", "<Leader>ga", "<CMD>G<CR>")
+    end,
+  },
 }
