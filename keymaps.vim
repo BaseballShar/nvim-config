@@ -43,7 +43,7 @@ nnoremap <silent> <Space>O O<Esc>S<Esc>j
 
 " Exit to normal mode quickly
 inoremap jk <ESC>
-inoremap kj <ESC>
+tnoremap jk <C-\><C-n>
 
 " Buffer management
 nnoremap <silent> <Space>d :bd<CR>
@@ -63,6 +63,3 @@ nnoremap <silent> ]q :cnext<CR>
 nnoremap <silent> [q :cprev<CR>
 nnoremap <silent> ]Q :clast<CR>
 nnoremap <silent> [Q :cfirst<CR>
-
-" Terminal keymaps
-tnoremap jk <Esc>
