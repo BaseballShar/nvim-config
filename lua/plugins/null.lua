@@ -17,6 +17,7 @@ local format_configs = {
       "javascriptreact",
       "typescript",
       "typescriptreact",
+      "json",
     },
     formatter = "prettier",
     flag = "--stdin-filepath %",
