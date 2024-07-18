@@ -73,4 +73,9 @@ return {
       vim.keymap.set("n", "gs", "<Plug>(leap-from-window)")
     end,
   },
+
+  -- Handy bracket actions
+  {
+    "tpope/vim-unimpaired",
+  },
 }
