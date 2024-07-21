@@ -1,15 +1,16 @@
 local keymap = vim.keymap.set
 local lsp_servers = {
-  "lua_ls",
-  "tsserver",
-  "pyright",
-  "hls",
-  "vimls",
-  "texlab",
-  "html",
   "cssls",
   "emmet_language_server",
+  "gopls",
+  "hls",
+  "html",
+  "lua_ls",
+  "pyright",
   "tailwindcss",
+  "texlab",
+  "tsserver",
+  "vimls",
 }
 
 return {
@@ -18,7 +19,9 @@ return {
     "numToStr/Comment.nvim",
     config = function()
       require("Comment").setup({
-        pre_hook = require('ts_context_commentstring.integrations.comment_nvim').create_pre_hook(),
+        pre_hook = require(
+          "ts_context_commentstring.integrations.comment_nvim"
+        ).create_pre_hook(),
       })
     end,
   },
