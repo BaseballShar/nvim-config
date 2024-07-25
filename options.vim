@@ -20,7 +20,7 @@ set showcmd
 set cursorline
 set linebreak " Avoid wrapping words
 set splitbelow " Open split window below
-set scrolloff=5 " Leave some lines above and below the cursor
+set scrolloff=2 " Leave some lines above and below the cursor
 
 " Tab and indentation
 set autoindent
