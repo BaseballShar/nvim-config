@@ -58,7 +58,12 @@ return {
   -- fzf integration
   {
     "junegunn/fzf",
-    dependencies = "junegunn/fzf.vim",
+    build = function()
+      vim.cmd("call fzf#install()")
+    end,
+  },
+  {
+    "junegunn/fzf.vim",
     config = function()
       -- keymap("n", "<Leader>gg", ":Rg<CR>", opts)
       keymap("n", "<Leader>gf", ":Lines<CR>", opts)
@@ -66,10 +71,10 @@ return {
   },
   -- fzf to telescope
   {
-    'nvim-telescope/telescope-fzf-native.nvim',
-    build = 'make',
+    "nvim-telescope/telescope-fzf-native.nvim",
+    build = "make",
     config = function()
-      require('telescope').load_extension('fzf')
+      require("telescope").load_extension("fzf")
     end,
   },
 }
