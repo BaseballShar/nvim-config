@@ -39,6 +39,7 @@ return {
       keymap("n", "<Leader>gd", builtin.diagnostics)
     end,
   },
+
   -- Telescope ui select
   {
     "nvim-telescope/telescope-ui-select.nvim",
@@ -55,6 +56,7 @@ return {
       telescope.load_extension("ui-select")
     end,
   },
+
   -- fzf integration
   {
     "junegunn/fzf",
@@ -62,13 +64,14 @@ return {
       vim.cmd("call fzf#install()")
     end,
   },
+
   {
     "junegunn/fzf.vim",
     config = function()
-      -- keymap("n", "<Leader>gg", ":Rg<CR>", opts)
       keymap("n", "<Leader>gf", ":Lines<CR>", opts)
     end,
   },
+
   -- fzf to telescope
   {
     "nvim-telescope/telescope-fzf-native.nvim",

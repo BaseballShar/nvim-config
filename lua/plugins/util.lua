@@ -63,7 +63,7 @@ return {
   {
     "tpope/vim-fugitive",
     config = function()
-      keymap("n", "<Leader>ga", "<CMD>G<CR>")
+      keymap("n", "<Leader>ga", "<Cmd>G<CR>")
     end,
   },
 }

@@ -68,7 +68,7 @@ return {
     tag = "v1.10.0",
     config = function()
       require("mason").setup()
-      keymap("n", "<Leader>m", ":Mason<CR>")
+      keymap("n", "<Leader>m", "<Cmd>Mason<CR>")
     end,
   },
 
