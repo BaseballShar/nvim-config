@@ -17,14 +17,6 @@ return {
             search = "",
           },
         },
-        defaults = {
-          mappings = {
-            i = {
-              ["<C-j>"] = "move_selection_next",
-              ["<C-k>"] = "move_selection_previous",
-            },
-          },
-        },
       })
       local builtin = require("telescope.builtin")
       keymap("n", "<Leader>f", builtin.find_files)
