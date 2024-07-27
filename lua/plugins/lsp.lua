@@ -102,8 +102,8 @@ return {
       keymap("n", "D", builtin.lsp_type_definitions)
       keymap("n", "<Leader>ds", builtin.lsp_document_symbols)
       keymap("n", "<Leader>ws", builtin.lsp_dynamic_workspace_symbols)
-      keymap("n", "rn", vim.lsp.buf.rename)
-      keymap("n", "<Space>ca", vim.lsp.buf.code_action)
+      keymap("n", "<Leader>rn", vim.lsp.buf.rename)
+      keymap("n", "<Leader>ca", vim.lsp.buf.code_action)
 
       -- Diagonstics
       keymap("n", "]d", vim.diagnostic.goto_next)
