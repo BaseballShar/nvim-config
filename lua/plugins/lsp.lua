@@ -99,7 +99,6 @@ return {
       keymap("n", "gd", builtin.lsp_definitions)
       keymap("n", "gr", builtin.lsp_references)
       keymap("n", "gi", builtin.lsp_implementations)
-      keymap("n", "D", builtin.lsp_type_definitions)
       keymap("n", "<Leader>ds", builtin.lsp_document_symbols)
       keymap("n", "<Leader>ws", builtin.lsp_dynamic_workspace_symbols)
       keymap("n", "<Leader>rn", vim.lsp.buf.rename)
