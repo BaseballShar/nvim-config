@@ -93,13 +93,19 @@ return {
         lspconfig[server].setup({})
       end
 
+      local builtin = require("telescope.builtin")
       keymap("n", "<Leader>k", ":LspInfo<CR>")
       keymap("n", "K", vim.lsp.buf.hover)
-      keymap("n", "gi", vim.lsp.buf.implementation)
-      keymap("n", "gd", vim.lsp.buf.definition)
-      keymap("n", "gr", vim.lsp.buf.references)
+      keymap("n", "gd", builtin.lsp_definitions)
+      keymap("n", "gr", builtin.lsp_references)
+      keymap("n", "gi", builtin.lsp_implementations)
+      keymap("n", "D", builtin.lsp_type_definitions)
+      keymap("n", "<Leader>ds", builtin.lsp_document_symbols)
+      keymap("n", "<Leader>ws", builtin.lsp_dynamic_workspace_symbols)
       keymap("n", "rn", vim.lsp.buf.rename)
       keymap("n", "<Space>ca", vim.lsp.buf.code_action)
+
+      -- Diagonstics
       keymap("n", "]d", vim.diagnostic.goto_next)
       keymap("n", "[d", vim.diagnostic.goto_prev)
     end,

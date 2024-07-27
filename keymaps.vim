@@ -30,9 +30,6 @@ nnoremap <silent> + <C-w>=
 inoremap jk <ESC>
 tnoremap jk <C-\><C-n>
 
-" Buffer management
-nnoremap <silent> <Space>d :bd<CR>
-
 " Change windows easily
 nnoremap <silent> <C-h> <C-w>h
 nnoremap <silent> <C-l> <C-w>l
