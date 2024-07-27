@@ -68,10 +68,11 @@ return {
   -- Jump to everywhere within 4 strokes
   {
     "ggandor/leap.nvim",
-    config = function()
-      vim.keymap.set("n", "s", "<Plug>(leap)")
-      vim.keymap.set("n", "gs", "<Plug>(leap-from-window)")
-    end,
+    -- Lazy load on pressing s or gs
+    keys = {
+      { "s", "<Plug>(leap)" },
+      { "gs", "<Plug>(leap-from-window)" },
+    },
   },
 
   -- Handy bracket actions

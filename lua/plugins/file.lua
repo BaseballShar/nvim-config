@@ -1,6 +1,3 @@
-local keymap = vim.keymap.set
-local opts = { silent = true }
-
 return {
   -- Breathable air for nvim
   {
@@ -11,25 +8,23 @@ return {
       "nvim-tree/nvim-web-devicons",
       "MunifTanjim/nui.nvim",
     },
-    keys = "<Leader>e",
-    config = function()
-      require("neo-tree").setup({})
-      keymap("n", "<Leader>e", ":Neotree toggle<CR>", opts)
-    end,
+    keys = {
+      { "<Leader>e", "<Cmd>Neotree toggle<CR>" },
+    },
+    opts = {},
   },
+
   -- Smooth like oil, vesatile like oil
   {
     "stevearc/oil.nvim",
-    keys = { "-" },
-    config = function()
-      require("oil").setup({
-        keymaps = {
-          ["h"] = "actions.parent",
-          ["l"] = "actions.select",
-          ["C-v"] = "actions.select_vsplit",
-        },
-      })
-      keymap("n", "-", ":Oil<CR>", opts)
-    end,
+    keys = {
+      { "-", "<Cmd>Oil<CR>" },
+    },
+    opts = {
+      keymaps = {
+        ["h"] = "actions.parent",
+        ["l"] = "actions.select",
+      },
+    },
   },
 }
