@@ -22,6 +22,7 @@ return {
   -- Treesitter textobjects
   {
     "nvim-treesitter/nvim-treesitter-textobjects",
+    event = "VeryLazy",
     config = function()
       require("nvim-treesitter.configs").setup({
         textobjects = {
@@ -78,5 +79,6 @@ return {
   -- Handy bracket actions
   {
     "tpope/vim-unimpaired",
+    event = "VeryLazy",
   },
 }

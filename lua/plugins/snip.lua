@@ -2,6 +2,7 @@ return {
   -- LuaSnip engine
   {
     "L3MON4D3/LuaSnip",
+    event = "VeryLazy",
     dependencies = {
       "rafamadriz/friendly-snippets",
       "r5n-dev/vscode-react-javascript-snippets",

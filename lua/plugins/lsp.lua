@@ -17,6 +17,7 @@ return {
   -- Comments all the way
   {
     "numToStr/Comment.nvim",
+    event = "VeryLazy",
     config = function()
       require("Comment").setup({
         pre_hook = require(
@@ -29,6 +30,7 @@ return {
   -- Comments in jsx
   {
     "JoosepAlviste/nvim-ts-context-commentstring",
+    event = "VeryLazy",
     config = function()
       require("ts_context_commentstring").setup()
     end,
@@ -66,6 +68,7 @@ return {
   {
     "williamboman/mason.nvim",
     tag = "v1.10.0",
+    event = "VeryLazy",
     config = function()
       require("mason").setup()
       keymap("n", "<Leader>m", "<Cmd>Mason<CR>")
@@ -76,6 +79,7 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     tag = "v1.29.0",
+    event = "VeryLazy",
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = lsp_servers,
@@ -87,6 +91,7 @@ return {
   {
     "neovim/nvim-lspconfig",
     tag = "v0.1.7",
+    event = "VeryLazy",
     config = function()
       local lspconfig = require("lspconfig")
       for _, server in ipairs(lsp_servers) do
@@ -117,6 +122,7 @@ return {
   "hrsh7th/cmp-cmdline",
   {
     "hrsh7th/nvim-cmp",
+    event = "VeryLazy",
     config = function()
       local cmp = require("cmp")
 
