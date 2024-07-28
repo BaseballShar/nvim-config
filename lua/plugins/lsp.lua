@@ -79,7 +79,6 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     tag = "v1.29.0",
-    event = "VeryLazy",
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = lsp_servers,
@@ -91,7 +90,6 @@ return {
   {
     "neovim/nvim-lspconfig",
     tag = "v0.1.7",
-    event = "VeryLazy",
     config = function()
       local lspconfig = require("lspconfig")
       for _, server in ipairs(lsp_servers) do
