@@ -106,6 +106,7 @@ return {
       keymap("n", "<Leader>ws", builtin.lsp_dynamic_workspace_symbols)
       keymap("n", "<Leader>rn", vim.lsp.buf.rename)
       keymap("n", "<Leader>ca", vim.lsp.buf.code_action)
+      keymap("n", "<Leader>ts", builtin.treesitter)
 
       -- Diagonstics
       keymap("n", "]d", vim.diagnostic.goto_next)
