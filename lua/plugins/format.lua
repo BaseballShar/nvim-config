@@ -16,6 +16,7 @@ return {
         python = { "autopep8" },
         typescript = { "prettier" },
         typescriptreact = { "prettier" },
+        toml = { "taplo" },
       },
       -- Auto format on save
       format_on_save = {
