@@ -28,3 +28,6 @@ This is my personal neovim configuration with good support of lsp, completion en
 
 # Credits
 Myself, my hard work, my unretreating persistance, my 6 years old macbook and the developers of nvim and its plugins and some youtube tutorial bros.
+
+# Branch
+- main: The important one
