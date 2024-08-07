@@ -7,7 +7,6 @@ filetype plugin on
 filetype indent on
 syntax on
 " set mouse=
-set shell=fish
 set history=1000
 set termguicolors " Enable 24 bit colors
 set timeoutlen=500 " Wait time for key combo
