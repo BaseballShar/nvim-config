@@ -122,4 +122,15 @@ return {
       keymap("n", "<Leader>ga", "<Cmd>G<CR>")
     end,
   },
+
+  -- Very bright and shiny TODO!!!
+  {
+    "folke/todo-comments.nvim",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    -- opts = {},
+    config = function()
+      require("todo-comments").setup()
+      keymap("n", "<Leader>gt", "<Cmd>TodoTelescope<CR>")
+    end,
+  },
 }
