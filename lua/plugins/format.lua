@@ -38,6 +38,7 @@ return {
     }
 
     -- Uncomment if want to manually format
-    -- vim.keymap.set("n", "<Leader>cf", conform.format)
+    vim.keymap.set("n", "<Leader>cf", conform.format)
+    vim.keymap.set("v", "<Leader>cf", conform.format)
   end,
 }
