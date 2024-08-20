@@ -18,6 +18,7 @@ return {
         typescriptreact = { "prettier" },
         toml = { "taplo" },
       },
+      range = {conform.Range},
       -- Auto format on save
       format_on_save = {
         timeout_ms = 500,
