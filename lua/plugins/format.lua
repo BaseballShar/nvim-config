@@ -18,6 +18,7 @@ return {
         typescriptreact = { "prettier" },
         toml = { "taplo" },
       },
+      range = {conform.Range},
       -- Auto format on save
       format_on_save = {
         timeout_ms = 500,
@@ -37,6 +38,7 @@ return {
     }
 
     -- Uncomment if want to manually format
-    -- vim.keymap.set("n", "<Leader>cf", conform.format)
+    vim.keymap.set("n", "<Leader>cf", conform.format)
+    vim.keymap.set("v", "<Leader>cf", conform.format)
   end,
 }

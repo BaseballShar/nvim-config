@@ -35,6 +35,9 @@ return {
             },
           },
         },
+        matchup = {
+          enable = true,
+        },
       })
     end,
   },
@@ -80,5 +83,13 @@ return {
   {
     "tpope/vim-unimpaired",
     event = "VeryLazy",
+  },
+
+  -- Navigate to matching pairs
+  {
+    "andymass/vim-matchup",
+    config = function()
+      vim.g.matchup_matchparen_offscreen = { method = "popup" }
+    end,
   },
 }
