@@ -17,8 +17,9 @@ return {
         typescript = { "prettier" },
         typescriptreact = { "prettier" },
         toml = { "taplo" },
+        rust = { "rustfmt" },
       },
-      range = {conform.Range},
+      range = { conform.Range },
       -- Auto format on save
       format_on_save = {
         timeout_ms = 500,
