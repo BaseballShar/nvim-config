@@ -11,6 +11,7 @@ local lsp_servers = {
   "texlab",
   "tsserver",
   "vimls",
+  "rust_analyzer",
 }
 
 return {
