@@ -1,9 +1,9 @@
 " Inspired by helix
 " Better intraline movement
-nnoremap <silent> gh _
-vnoremap <silent> gh _
-nnoremap <silent> gl $
-vnoremap <silent> gl $
+nnoremap <silent> H _
+vnoremap <silent> H _
+nnoremap <silent> L $
+vnoremap <silent> L $
 
 " U for redo, <C-r> for line restore
 nnoremap <silent> U <C-r>
