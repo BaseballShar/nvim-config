@@ -97,6 +97,17 @@ return {
         lspconfig[server].setup({})
       end
 
+      -- Setup swift lsp server
+      lspconfig.sourcekit.setup({
+        capabilities = {
+          workspace = {
+            didChangeWatchedFiles = {
+              dynamicRegistration = true,
+            },
+          },
+        },
+      })
+
       local builtin = require("telescope.builtin")
       keymap("n", "<Leader>k", ":LspInfo<CR>")
       keymap("n", "K", vim.lsp.buf.hover)
@@ -173,6 +184,10 @@ return {
           capabilities = capabilities,
         })
       end
+      -- Setup swift completion
+      require("lspconfig").sourcekit.setup({
+        capabilities = capabilities,
+      })
     end,
   },
   "saadparwaiz1/cmp_luasnip",
