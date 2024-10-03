@@ -18,6 +18,7 @@ return {
         typescriptreact = { "prettier" },
         toml = { "taplo" },
         rust = { "rustfmt" },
+        swift = { "swift_format" },
       },
       range = { conform.Range },
       -- Auto format on save
