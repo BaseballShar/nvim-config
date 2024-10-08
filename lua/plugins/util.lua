@@ -98,7 +98,7 @@ return {
       vim.g.vimwiki_list = { { syntax = "markdown", ext = "md" } }
     end,
     config = function()
-      keymap({ "n", "v" }, "<Leader>t", "<Plug>VimwikiToggleListItem")
+      keymap({ "n", "v" }, "<A-t>", "<Plug>VimwikiToggleListItem")
     end,
   },
 
