@@ -79,7 +79,7 @@ return {
   -- A Terminal inside a vim run by another terminal
   {
     "akinsho/toggleterm.nvim",
-    tag = "v2.11.0",
+    version = "^2",
     keys = "<A-1>",
     config = function()
       require("toggleterm").setup({
