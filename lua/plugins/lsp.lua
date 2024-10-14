@@ -9,7 +9,7 @@ local lsp_servers = {
   "pyright",
   "tailwindcss",
   "texlab",
-  "tsserver",
+  "ts_ls",
   "vimls",
   "rust_analyzer",
 }
@@ -68,7 +68,7 @@ return {
   -- Mason the medieval lsp gather
   {
     "williamboman/mason.nvim",
-    tag = "v1.10.0",
+    version = "^1",
     event = "VeryLazy",
     config = function()
       require("mason").setup()
@@ -79,7 +79,7 @@ return {
   -- Mason lspconfig
   {
     "williamboman/mason-lspconfig.nvim",
-    tag = "v1.29.0",
+    version = "^1",
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = lsp_servers,
@@ -90,7 +90,7 @@ return {
   -- nvim lspconfig
   {
     "neovim/nvim-lspconfig",
-    tag = "v0.1.7",
+    version = "^1",
     config = function()
       local lspconfig = require("lspconfig")
       for _, server in ipairs(lsp_servers) do

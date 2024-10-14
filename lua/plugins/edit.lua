@@ -52,7 +52,7 @@ return {
   -- LaTeX >>> Word
   {
     "lervag/vimtex",
-    tag = "v2.15",
+    version = "~2.15",
     lazy = false,
     config = function()
       -- Disable auto popup of quickfix window
