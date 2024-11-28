@@ -11,4 +11,4 @@ local function toggle_diagnostic()
   end
 end
 
-vim.keymap.set("n", "<Leader>lt", toggle_diagnostic)
+vim.keymap.set("n", "<Leader>dt", toggle_diagnostic)
