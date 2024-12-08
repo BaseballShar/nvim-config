@@ -36,8 +36,8 @@ map("n", "<C-j>", "<C-w>j", "Move to down pane")
 map("n", "<C-k>", "<C-w>k", "Move to up pane")
 
 -- Quit and save easily
-map("n", "<Space>q", ":q<CR>", "Quit")
-map("n", "<Space>s", ":w<CR>", "Save")
+map("n", "<Leader>q", ":q<CR>", "Quit")
+map("n", "<Leader>s", ":w<CR>", "Save")
 
 -- Open nvim builtin terminal
 map("n", "<C-t>", ":terminal<CR>", "Open builtin terminal")
