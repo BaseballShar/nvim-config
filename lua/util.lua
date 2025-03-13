@@ -1,6 +1,4 @@
--- Disables linting by default
-vim.diagnostic.enable(false)
-
+-- Toggle diagonstics on and off
 local function toggle_diagnostic()
   if vim.diagnostic.is_enabled() then
     vim.diagnostic.enable(false)

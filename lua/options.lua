@@ -35,3 +35,7 @@ vim.opt.smartcase = true
 -- Use system clipboard when copying
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.clipboard:append("unnamed")
+
+-- Folding
+vim.opt.foldmethod = "indent"
+vim.opt.foldenable = false
