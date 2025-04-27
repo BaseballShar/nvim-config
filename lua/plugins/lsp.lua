@@ -7,11 +7,12 @@ local lsp_servers = {
   "html",
   "lua_ls",
   "pyright",
+  "rust_analyzer",
   "tailwindcss",
   "texlab",
+  "tinymist",
   "ts_ls",
   "vimls",
-  "rust_analyzer",
 }
 
 return {
