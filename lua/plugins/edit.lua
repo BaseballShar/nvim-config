@@ -92,4 +92,19 @@ return {
       vim.g.matchup_matchparen_offscreen = { method = "popup" }
     end,
   },
+
+  -- Instant preview for typst
+  {
+    "chomosuke/typst-preview.nvim",
+    ft = "typst",
+    version = "1.*",
+    opts = {
+      dependencies_bin = {
+        ["tinymist"] = "tinymist",
+      },
+    },
+    keys = {
+      { "<Leader>ll", "<Cmd>TypstPreview<CR>" },
+    },
+  },
 }
